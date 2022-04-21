@@ -1,0 +1,22 @@
+@import "src/assets/mixin";
+
+.footer {
+  width: 90%;
+  height: 100px;
+  margin: 0 auto 30px; // !!!
+  background: #262626;
+  @include flexible;
+
+  h4 {
+    width: 50%;
+    margin-left: 20px;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #C0C0C0;
+  }
+
+
+}
+
+
+

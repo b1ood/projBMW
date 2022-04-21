@@ -1,0 +1,43 @@
+@import "src/assets/mixin";
+
+.header {
+  position: sticky;
+  top: 0;
+  @include flexible;
+  width: 90%;
+  height: 80px;
+  margin: 0 auto;
+  z-index: 1000;
+  background: #262626;
+  justify-content: space-between;
+
+  &__main-text {
+    font: italic 40px/30px fantasy;
+    color: whitesmoke;
+    cursor: default;
+    opacity: 100%;
+    margin-left: 15px;
+  }
+
+  &__tagline{
+    width: 100px;
+    height: 70px;
+  }
+
+  &__navbar{
+    display: flex;
+    font: italic 20px/30px fantasy;
+    margin-right: 20px;
+
+    a{
+      text-decoration: none;
+      color: whitesmoke;
+      transition: 0.3s;
+
+      &:hover {
+        transition: 0.3s;
+        color: #ff0028;
+      }
+    }
+  }
+}
