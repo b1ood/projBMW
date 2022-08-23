@@ -1,0 +1,51 @@
+@import "src/assets/mixin";
+
+.model {
+  width: 80%;
+  margin: 10px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+
+  &__card {
+    @include btn-font;
+    flex-direction: column;
+    width: max-content;
+    padding: 15px;
+    margin: 0 auto;
+    transition: 0.5s;
+    height: 300px;
+
+    &:hover {
+      transition: 0.5s;
+      opacity: 70%;
+    }
+  }
+}
+
+h1 {
+  width: 80%;
+  margin: 20px auto 0;
+}
+
+h3 {
+  margin: 5px auto;
+}
+
+img {
+  border-radius: 15px;
+  width: 300px;
+
+
+}
+
+a {
+  @include link;
+  text-decoration: none;
+  color: #262626;
+  height: 50px;
+}
+
+p {
+  margin: 5px 0;
+  font: italic 20px/30px bold;
+}
