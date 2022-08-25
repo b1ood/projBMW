@@ -1,0 +1,17 @@
+@import "src/assets/mixin";
+
+.box {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  bottom: 20%;
+  right: 10%;
+  background: #262626;
+  border-radius: 100%;
+  @include btn-font;
+}
+
+a {
+  @include link;
+}
+

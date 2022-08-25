@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -6,10 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  public isShownGens = false;
 
   constructor() { }
 
-  ngOnInit(): void {
+  showGens() {
+    let genBtn: any = document.getElementById('fourthGen');
+
+    if (genBtn.innerHTML === 'Скрыть') {
+      genBtn.innerHTML = 'Узнать больше';
+    } else {
+      genBtn.innerHTML = 'Скрыть';
+    }
+
+    this.isShownGens = !this.isShownGens;
+
+    // return helper;
   }
 
+  ngOnInit(): void {
+  }
 }

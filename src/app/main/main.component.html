@@ -2,14 +2,14 @@
 
 <div class="first-letter">
   <h2>С удовольствием за рулем</h2>
-  Выразительные и гармоничные слова, воплощающие в себе истинное удовольствие: мощный и одновременно
+  Выразительные слова, воплощающие в себе истинное удовольствие: мощный и одновременно
   такой простой слоган. C 1972 года девиз Freude am Fahren («С удовольствием за рулем») сопровождает BMW во всей
-  рекламной коммуникации, в имиджевых кампаниях и социальных медиа. «Слоган вызывает положительные эмоции.
+  рекламной коммуникации. «Слоган вызывает положительные эмоции.
   Удовольствие — это суть бренда BMW. Таким образом, слоган позволяет ощутить именно то, о чем он заявляет», — говорит
   Йоахим Бликхойзер, руководитель отдела корпоративной и бренд-айдентики BMW Group.
 </div>
 
-<app-slider-main></app-slider-main>
+<!--slider-->
 
 <div class="intro">
 
@@ -21,7 +21,9 @@
       Основанная на модели E30 BMW 3 серии 1986 года в двухдверном варианте, первая представленная модель имела 2,3
       L рядный четырёхцилиндровый двигатель S14B23. Дизайн двигателя основывался на предыдущих наработках BMW. Выступала
       во многих кузовных гоночных сериях, с немалым успехом...
-      <button class="intro__gen__more">Узнать больше</button>
+      <form action="https://vse-pro-bmw.info/obzor-sportivnogo-sedana-bmw-m3-e30/">
+        <button class="intro__gen__more">Узнать больше</button>
+      </form>
     </div>
     <img src="/assets/img/intro/e30.jpg" alt="" class="intro__gen__image img">
   </div>
@@ -35,7 +37,9 @@
       укомплектованный шестицилиндровым двигателем, вытеснивший 2990 cc версию и развивающий 286 л. с./210 кВт.
       Изначально доступный только как купе BMW M3 позднее появился в модификациях кабриолет и седан в 1994. M3 в 36
       кузове был первой среди М-версий в модификации с «правым рулём»...
-      <button class="intro__gen__more">Узнать больше</button>
+      <form action="https://vse-pro-bmw.info/obzor-bmw-m3-e36/">
+        <button class="intro__gen__more">Узнать больше</button>
+      </form>
     </div>
     <img src="/assets/img/intro/e36.jpg" alt="" class="intro__gen__image img">
   </div>
@@ -49,7 +53,9 @@
       перенастроенным шасси дало заметную прибавку в управляемости автомобиля. Была выставлена в гоночную серию DTM в
       2003-ем году. Была оснащена на тот момент двигателем S54B32 на 343 л. с. при 8700 об./мин., 6-ступенчатой МКПП с
       двойным узлом сцепления...
-      <button class="intro__gen__more">Узнать больше</button>
+      <form action="https://vse-pro-bmw.info/bmw-m3-e46-edinstvennyj-i-nepovtorimyj/">
+        <button class="intro__gen__more">Узнать больше</button>
+      </form>
     </div>
     <img src="/assets/img/intro/e46.jpg" alt="" class="intro__gen__image img">
   </div>
@@ -63,7 +69,12 @@
       показом концепт-кара BMW M3. Как и в случае с концептами E46 M3 и E60 M5, концепт M3 был практически серийной
       моделью, премьера которой состоялась в этом же 2007 году на франкфуртском автошоу (Германия, 13-23 сентября).
       Баварская компания выпустила облегчённую версию M3 GTS...
-      <button class="intro__gen__more">Узнать больше</button>
+      <div class="intro__gen__helper" *ngIf="isShownGens" id="moreAboutFourthGen">
+        <a href="https://vse-pro-bmw.info/harakteristiki-bmw-m3-e90/">E90</a>
+        <a href="https://vse-pro-bmw.info/obzor-bmw-m3-e92/">E92</a>
+        <a href="https://vse-pro-bmw.info/obzor-bmw-m3-e93/">E93</a>
+      </div>
+      <button class="intro__gen__more" (click)="showGens()" id="fourthGen">Узнать больше</button>
     </div>
     <img src="/assets/img/intro/e90.jpg" alt="" class="intro__gen__image img">
   </div>
@@ -77,7 +88,9 @@
       2014 года, в России — летом 2014 года. F80 M3 будет продаваться только в кузове седан, а кузов купе и кабриолет
       были выделены в отдельный модельный ряд BMW M4. В 2015 году представлена рестайлинговая версия БМВ М3 в кузове
       F80...
-      <button class="intro__gen__more">Узнать больше</button>
+      <form action="https://vse-pro-bmw.info/bmw-m3-f80/">
+        <button class="intro__gen__more">Узнать больше</button>
+      </form>
     </div>
     <img src="/assets/img/intro/f80.jpg" alt="" class="intro__gen__image img">
   </div>
@@ -90,7 +103,9 @@
       Полная M-версия G20 3 Series, оснащенная рядным шестицилиндровым двигателем BMW S58 с турбонаддувом, который
       дебютировал в G01 X3 M. Полный привод (xDrive) был объявлен опциональным для нового M3, что будет
       представлять собой первый случай, когда M3 использует компоновку трансмиссии, отличную от заднего привода...
-      <button class="intro__gen__more">Узнать больше</button>
+      <form action="https://www.drive2.ru/b/591123840445199789/">
+        <button class="intro__gen__more">Узнать больше</button>
+      </form>
     </div>
     <img src="/assets/img/intro/g80.jpg" alt="" class="intro__gen__image img">
   </div>
@@ -100,3 +115,4 @@
 </div>
 
 <app-footer></app-footer>
+

@@ -3,19 +3,34 @@
 .first-letter {
   @include flexible;
   flex-direction: column;
-  width: 90%;
+  width: 80%;
   margin: 10px auto;
   @include main-text;
+
+  @media (max-width: 1015px) {
+    font-size: 18px;
+    text-align: center;
+  }
 }
 
 .intro {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   @include main-text;
+
+  @media (max-width: 1015px) {
+    font-size: 18px;
+    text-align: center;
+  }
 
   :nth-child(4n) {
     flex-direction: row-reverse;
     text-align: right;
+
+    @media (max-width: 1185px) {
+      text-align: center;
+      flex-direction: column-reverse;
+    }
   }
 
   &__text-line {
@@ -28,15 +43,69 @@
   &__gen {
     @include flexible;
 
+    @media (max-width: 1185px) {
+      flex-direction: column-reverse;
+    }
+
     &__text {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 0 30px 60px;
 
       h2 {
         text-align: center;
       }
+    }
 
+    &__helper {
+      position: relative;
       display: flex;
       flex-direction: column;
-      margin: 0 30px 60px;
+      height: 0;
+      width: 0;
+      left: 70%;
+      top: 15px;
+
+      @media (max-width: 1300px) {
+        left: 80%;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        border: 1px solid #ffffff;
+        @include link;
+
+        @media (max-width: 1300px) {
+          width: 100px;
+        }
+
+        &:hover {
+          transition: 0.3s;
+          color: #000000;
+        }
+
+        &:nth-child(2) {
+          border-bottom: none;
+          border-top: none;
+          background: #120a8f;
+        }
+
+        &:nth-child(1) {
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          background: #1e90ff;
+        }
+
+        &:nth-child(3) {
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          background: #ff0000;
+        }
+      }
     }
 
     &__more {
@@ -73,10 +142,24 @@
 
 }
 
-.img {
-  width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 0 1em 0.5em gray;
+.bg {
+  position: relative;
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  z-index: -999;
 }
 
+.img {
+  width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 0 1em 0.5em gray;
 
+  @media (max-width: 1250px) {
+    width: 400px;
+  }
+}
+
+form {
+  display: flex;
+}
