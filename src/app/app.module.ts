@@ -10,6 +10,7 @@ import { ModelsComponent } from './models/models.component';
 import { ReturnerComponent } from './returner/returner.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SomeSpecialDirDirective } from './someSpecialDir.directive';
+import { CharacteristicComponent } from './characteristic/characteristic.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { SomeSpecialDirDirective } from './someSpecialDir.directive';
         FooterComponent,
         ModelsComponent,
         ReturnerComponent,
-        SomeSpecialDirDirective
+        SomeSpecialDirDirective,
+        CharacteristicComponent
     ],
   imports: [
     BrowserModule,
