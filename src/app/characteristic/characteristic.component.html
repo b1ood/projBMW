@@ -1,1 +1,125 @@
-<p>characteristic works!</p>
+<app-header></app-header>
+
+<div id="selection">
+  <h2 style="font: italic 30px cursive">Технические характеристики</h2>
+  <select id="select" (change)="checkOption()">
+    <option value="model" id="model">Модель</option>
+    <option value="E30 Coupe">E30 Купе</option>
+    <option value="Е30 Cabriolet">Е30 Кабриолет</option>
+    <option value="E36 Sedan">E36 Седан</option>
+    <option value="Е36 Coupe">Е36 Купе</option>
+    <option value="Е36 Cabriolet">Е36 Кабриолет</option>
+    <option value="Е46 Coupe">Е46 Купе</option>
+    <option value="Е46 Cabriolet">Е46 Кабриолет</option>
+    <option value="E90 (Sedan)">E90 (Седан)</option>
+    <option value="Е92 (Coupe)">Е92 (Купе)</option>
+    <option value="Е93 (Cabriolet)">Е93 (Кабриолет)</option>
+    <option value="F80">F80</option>
+  </select>
+</div>
+
+<div class="slider" *ngIf="isShownChar === false">
+  <figure>
+    <img src="/assets/img/models/e30/e30_coupe.jpg" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+  </figure>
+</div>
+
+<div class="tableChar" *ngIf="isShownChar === true">
+
+  <h3>Двигатель</h3>
+
+  <div class="tableChar__section tablePart" *ngFor="let entry of engine">
+    <div class="tableChar__section__column">
+      <ol>
+        {{entry[0]}}
+      </ol>
+    </div>
+    <div class="tableChar__section__column">
+      <ol class="charValues">
+        {{entry[1]}}
+      </ol>
+    </div>
+  </div>
+
+  <h3>Привод</h3>
+
+  <div class="tableChar__section tablePart" *ngFor="let entry of drive">
+    <div class="tableChar__section__column">
+      <ol>
+        {{entry[0]}}
+      </ol>
+    </div>
+    <div class="tableChar__section__column">
+      <ol class="charValues">
+        {{entry[1]}}
+      </ol>
+    </div>
+  </div>
+
+  <h3>Трансмиссия</h3>
+
+  <div class="tableChar__section tablePart" *ngFor="let entry of transmission">
+    <div class="tableChar__section__column">
+      <ol>
+        {{entry[0]}}
+      </ol>
+    </div>
+    <div class="tableChar__section__column">
+      <ol class="charValues">
+        {{entry[1]}}
+      </ol>
+    </div>
+  </div>
+
+  <h3>Тормоза</h3>
+
+  <div class="tableChar__section tablePart" *ngFor="let entry of brakes">
+    <div class="tableChar__section__column">
+      <ol>
+        {{entry[0]}}
+      </ol>
+    </div>
+    <div class="tableChar__section__column">
+      <ol class="charValues">
+        {{entry[1]}}
+      </ol>
+    </div>
+  </div>
+
+  <h3>Габариты</h3>
+
+  <div class="tableChar__section tablePart" *ngFor="let entry of dimensions">
+    <div class="tableChar__section__column">
+      <ol>
+        {{entry[0]}}
+      </ol>
+    </div>
+    <div class="tableChar__section__column">
+      <ol class="charValues">
+        {{entry[1]}}
+      </ol>
+    </div>
+  </div>
+
+  <h3>Прочее</h3>
+
+  <div class="tableChar__section tablePart" *ngFor="let entry of other">
+    <div class="tableChar__section__column">
+      <ol>
+        {{entry[0]}}
+      </ol>
+    </div>
+    <div class="tableChar__section__column">
+      <ol class="charValues">
+        {{entry[1]}}
+      </ol>
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

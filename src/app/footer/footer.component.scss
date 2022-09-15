@@ -1,13 +1,10 @@
 @import "src/assets/mixin";
 
 .footer {
-  width: 80%;
   height: 80px;
-  margin: 0 auto;
   background: #262626;
   @include flexible;
   justify-content: space-between;
-  padding: 10px;
 
   @media (max-width: 1110px) {
     display: flex;

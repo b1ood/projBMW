@@ -7,10 +7,10 @@ import { RouterModule } from "@angular/router";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModelsComponent } from './models/models.component';
-import { ReturnerComponent } from './returner/returner.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SomeSpecialDirDirective } from './someSpecialDir.directive';
 import { CharacteristicComponent } from './characteristic/characteristic.component';
+import {CarCharService} from "./carChar/car-char.service";
 
 @NgModule({
     declarations: [
@@ -19,7 +19,6 @@ import { CharacteristicComponent } from './characteristic/characteristic.compone
         HeaderComponent,
         FooterComponent,
         ModelsComponent,
-        ReturnerComponent,
         SomeSpecialDirDirective,
         CharacteristicComponent
     ],
@@ -28,11 +27,11 @@ import { CharacteristicComponent } from './characteristic/characteristic.compone
     RouterModule.forRoot([
       {path: '', component: MainComponent},
       {path: 'models', component: ModelsComponent},
+      {path: 'characteristic', component: CharacteristicComponent}
     ]),
     BrowserAnimationsModule,
-
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [CarCharService]
 })
 export class AppModule { }

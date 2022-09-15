@@ -3,7 +3,6 @@
 .first-letter {
   @include flexible;
   flex-direction: column;
-  width: 80%;
   margin: 10px auto;
   @include main-text;
 
@@ -14,8 +13,6 @@
 }
 
 .intro {
-  width: 80%;
-  margin: 0 auto;
   @include main-text;
 
   @media (max-width: 1015px) {
