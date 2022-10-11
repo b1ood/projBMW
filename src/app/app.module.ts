@@ -2,15 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './components/main/main.component';
 import { RouterModule } from "@angular/router";
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { ModelsComponent } from './models/models.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ModelsComponent } from './components/models/models.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SomeSpecialDirDirective } from './someSpecialDir.directive';
-import { CharacteristicComponent } from './characteristic/characteristic.component';
-import {CarCharService} from "./carChar/car-char.service";
+import { CharacteristicComponent } from './components/characteristic/characteristic.component';
+import {CarCharService} from "./components/characteristic/carChar/car-char.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { AboutCharacteristicsComponent } from './components/characteristic/about-characteristics/about-characteristics.component';
+import { MainSliderComponent } from './components/main/main-slider/main-slider.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +23,9 @@ import {CarCharService} from "./carChar/car-char.service";
         FooterComponent,
         ModelsComponent,
         SomeSpecialDirDirective,
-        CharacteristicComponent
+        CharacteristicComponent,
+        AboutCharacteristicsComponent,
+        MainSliderComponent
     ],
   imports: [
     BrowserModule,
@@ -30,6 +35,7 @@ import {CarCharService} from "./carChar/car-char.service";
       {path: 'characteristic', component: CharacteristicComponent}
     ]),
     BrowserAnimationsModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent],
   providers: [CarCharService]

@@ -1,4 +1,4 @@
-@import "src/assets/mixin";
+@import "../../../assets/mixin";
 
 .footer {
   height: 80px;
@@ -22,7 +22,7 @@
     @media (max-width: 1110px) {
       text-align: center;
       width: 90%;
-      margin: 0 auto;
+      margin: 0 auto 10px;
     }
   }
 

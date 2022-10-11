@@ -1,0 +1,129 @@
+@import "../../../assets/mixin";
+
+#selection {
+  display: flex;
+  align-items: center;
+}
+
+select {
+  margin: auto 0 26px 10px;
+  width: 200px;
+  height: 30px;
+  border: 2px solid #777;
+  border-radius: 10px;
+  font: caption;
+  font-size: 15px;
+}
+
+option {
+  color: #ffffff;
+  background: #262626;
+}
+
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px auto 0;
+
+  &__title {
+    width: 40%;
+    justify-content: center;
+    text-align: center;
+    @include main-text;
+  }
+}
+
+.slider {
+  overflow: hidden;
+  width: 710px;
+  height: 480px;
+  position: relative;
+}
+
+figure {
+  width: 500%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  transition: all 2s linear;
+  animation: 30s slidy alternate infinite;
+}
+
+.slide {
+  width: 20%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 710px;
+}
+
+.searchImg {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+}
+
+@keyframes slidy {
+  0% {
+    left: 0;
+  }
+  5% {
+    left: 0;
+  }
+  10% {
+    left: -100%;
+  }
+  15% {
+    left: -100%;
+  }
+  20% {
+    left: -200%;
+  }
+  25% {
+    left: -200%;
+  }
+  30% {
+    left: -300%;
+  }
+  35% {
+    left: -300%;
+  }
+  40% {
+    left: -400%;
+  }
+  45% {
+    left: -400%;
+  }
+  50% {
+    left: -300%;
+  }
+  55% {
+    left: -300%;
+  }
+  60% {
+    left: -200%;
+  }
+  65% {
+    left: -200%;
+  }
+  70% {
+    left: -100%;
+  }
+  75% {
+    left: -100%;
+  }
+  80% {
+    left: 0;
+  }
+  85% {
+    left: 0;
+  }
+}

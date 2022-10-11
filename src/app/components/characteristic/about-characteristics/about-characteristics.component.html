@@ -1,0 +1,95 @@
+<div class="tableChar">
+
+  <h3>{{ name }}</h3>
+
+  <h3>Двигатель</h3>
+
+  <div class="tableChar__section tablePart" *ngFor="let entry of engine">
+    <div class="tableChar__section__column">
+      <ol>
+        {{ entry[0] }}
+      </ol>
+    </div>
+    <div class="tableChar__section__column">
+      <ol class="charValues">
+        {{ entry[1] }}
+      </ol>
+    </div>
+  </div>
+
+  <h3>Привод</h3>
+
+    <div class="tableChar__section tablePart" *ngFor="let entry of drive">
+      <div class="tableChar__section__column">
+        <ol>
+          {{entry[0]}}
+        </ol>
+      </div>
+      <div class="tableChar__section__column">
+        <ol class="charValues">
+          {{entry[1]}}
+        </ol>
+      </div>
+    </div>
+
+  <h3>Трансмиссия</h3>
+
+    <div class="tableChar__section tablePart" *ngFor="let entry of transmission">
+      <div class="tableChar__section__column">
+        <ol>
+          {{entry[0]}}
+        </ol>
+      </div>
+      <div class="tableChar__section__column">
+        <ol class="charValues">
+          {{entry[1]}}
+        </ol>
+      </div>
+    </div>
+
+  <h3>Тормоза</h3>
+
+    <div class="tableChar__section tablePart" *ngFor="let entry of brakes">
+      <div class="tableChar__section__column">
+        <ol>
+          {{entry[0]}}
+        </ol>
+      </div>
+      <div class="tableChar__section__column">
+        <ol class="charValues">
+          {{entry[1]}}
+        </ol>
+      </div>
+    </div>
+
+  <h3>Габариты</h3>
+
+    <div class="tableChar__section tablePart" *ngFor="let entry of dimensions">
+      <div class="tableChar__section__column">
+        <ol>
+          {{entry[0]}}
+        </ol>
+      </div>
+      <div class="tableChar__section__column">
+        <ol class="charValues">
+          {{entry[1]}}
+        </ol>
+      </div>
+    </div>
+
+  <h3>Прочее</h3>
+
+    <div class="tableChar__section tablePart" *ngFor="let entry of other">
+      <div class="tableChar__section__column">
+        <ol>
+          {{entry[0]}}
+        </ol>
+      </div>
+      <div class="tableChar__section__column">
+        <ol class="charValues">
+          {{entry[1]}}
+        </ol>
+      </div>
+    </div>
+
+</div>

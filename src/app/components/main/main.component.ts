@@ -20,8 +20,6 @@ export class MainComponent implements OnInit {
     }
 
     this.isShownGens = !this.isShownGens;
-
-    // return helper;
   }
 
   ngOnInit(): void {

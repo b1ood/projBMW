@@ -1,0 +1,51 @@
+h3 {
+  margin: 10px auto;
+  text-align: center;
+  font: italic 25px cursive;
+  color: #ff0028;
+}
+
+h3 {
+  color: #ff0028;
+}
+
+ol {
+  padding: 0;
+  margin: 10px auto;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+.tableChar {
+  margin: 20px auto;
+
+  &__section {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    font: italic 20px bold;
+
+    @media (max-width: 1200px) {
+      width: 80%;
+    }
+
+
+    @media (max-width: 950px) {
+      width: 70%;
+      font-size: 16px;
+    }
+
+    &__column {
+
+      &:nth-child(even) {
+        width: 200px;
+        text-align: center;
+      }
+
+      &:nth-child(odd) {
+        width: 420px;
+      }
+    }
+  }
+}

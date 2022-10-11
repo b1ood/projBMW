@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+<div class="info">
+  <div class="slider">
+    <figure id="fig">
+      <div class="slide">
+        <img src="/assets/img/charImg/3-series.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="/assets/img/charImg/3-series%20(2).jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="/assets/img/charImg/3-series%20(3).jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="/assets/img/charImg/3-series%20(4).jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="/assets/img/charImg/3-series%20(5).jpg" alt="">
+      </div>
+    </figure>
+  </div>
+  <div class="info__title">
+    <h4>АВТОМОБИЛИ М: ИСПЫТАЙТЕ СТРАСТЬ.</h4>
+    Рождены на гоночной трассе, безупречны на любой дороге — в этом кредо автомобилей M. Вдохновленные автоспортом, эти
+    эксклюзивно оснащенные автомобили с легкостью соответствуют самым высоким требованиям к динамике, маневренности и
+    тяговым характеристикам. Мощные двигатели в сочетании с выразительным дизайном и высокой функциональностью позволят
+    в полной мере ощутить страсть, вложенную в создание каждого из этих автомобилей.
+  </div>
+</div>
+
+<div id="selection">
+  <h2 style="font: italic 30px cursive">Технические характеристики</h2>
+  <select id="select" (change)="checkOption()">
+    <option value="model">Модель</option>
+    <option value="E30 Coupe">E30 Купе</option>
+    <option value="Е30 Cabriolet">Е30 Кабриолет</option>
+    <option value="E36 Sedan">E36 Седан</option>
+    <option value="Е36 Coupe">Е36 Купе</option>
+    <option value="Е36 Cabriolet">Е36 Кабриолет</option>
+    <option value="Е46 Coupe">Е46 Купе</option>
+    <option value="Е46 Cabriolet">Е46 Кабриолет</option>
+    <option value="E90 (Sedan)">E90 (Седан)</option>
+    <option value="Е92 (Coupe)">Е92 (Купе)</option>
+    <option value="Е93 (Cabriolet)">Е93 (Кабриолет)</option>
+    <option value="F80">F80</option>
+    <option value="G80">G80</option>
+  </select>
+</div>
+
+<app-about-characteristics *ngIf="shownChars"
+                           [selectedIndex]="checkOption()"
+                           [chars]="carChars">
+</app-about-characteristics>
+
+<app-footer></app-footer>
