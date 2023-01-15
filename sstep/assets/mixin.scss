@@ -1,0 +1,34 @@
+@mixin main-text {
+  font: italic 20px/30px bold;
+  color: #262626;
+}
+
+@mixin intro-gens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: italic 20px/30px bold;
+  color: #262626;
+}
+
+@mixin flexible {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin btn-font {
+  font: italic 20px/30px auto;
+  color: #262626;
+}
+
+@mixin link {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    color: #ff0028;
+  }
+}
